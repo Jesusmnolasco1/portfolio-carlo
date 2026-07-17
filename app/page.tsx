@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 
 export default function Home() {
@@ -51,9 +52,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-400">
-              Diseñador gráfico egresado del ITLA especializado en branding, 
-              motion graphics, edición audiovisual, diseño editorial y 
-              contenido visual estratégico para marcas modernas.
+              Editor de Video y Motion Graphics para marcas, proyectos digitales que quieran contenido dinámico y movido.
             </p>
 
             {/* CTA Botones */}
@@ -108,33 +107,12 @@ export default function Home() {
       <section id="about" className="relative z-10 mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-4">01 // Trayectoria</h2>
         <div className="rounded-3xl border border-white/5 bg-zinc-900/30 p-8 md:p-10 backdrop-blur-md">
-          <h3 className="text-3xl font-bold text-white mb-4">Diseño con enfoque estratégico</h3>
-          <p className="text-lg leading-relaxed text-zinc-400 max-w-4xl">
-            Soy Carlos Gabriel Minyety Almonte, diseñador gráfico egresado del Instituto Tecnológico de Las Américas (ITLA). Me dedico al desarrollo de identidades visuales memorables, campañas publicitarias de alto impacto, motion graphics dinámicos, diseño editorial impecable y postproducción audiovisual orientada a potenciar marcas en entornos digitales competitivos.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= HABILIDADES (Estilo Figma) ================= */}
-      <section id="skills" className="relative z-10 mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-6">02 // Core Competencies</h2>
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {[
-            { name: "Diseño Gráfico", icon: "🎨" },
-            { name: "Adobe Photoshop", icon: "✨" },
-            { name: "Adobe Illustrator", icon: "🖌" },
-            { name: "Motion Graphics", icon: "🎬" },
-            { name: "Edición de Video", icon: "🎥" },
-            { name: "Diseño Editorial", icon: "📚" }
-          ].map((skill) => (
-            <div 
-              key={skill.name}
-              className="group flex items-center gap-4 rounded-2xl border border-white/5 bg-zinc-900/20 p-5 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-zinc-900/50 hover:border-blue-500/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)]"
-            >
-              <span className="text-2xl opacity-80 group-hover:scale-110 transition-transform duration-300">{skill.icon}</span>
-              <span className="text-base font-semibold text-zinc-300 group-hover:text-white transition-colors">{skill.name}</span>
-            </div>
-          ))}
+          <h3 className="text-3xl font-bold text-white mb-4">Daré forma a tu idea.</h3>
+          <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+            <p>
+              Egresado en el técnologo en Multimedia en el ITLA y especializando en la creación de contenido audiovisual movido y dinámico. Tomaré las piezas que componen tu idea y les daré forma para que conecten con la audiencia y eleve tu presencial digital.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -153,34 +131,30 @@ export default function Home() {
           {/* Track de la animación */}
           <div className="flex w-max animate-ruleta gap-6 px-6">
             
-            {/* Duplicamos el array de proyectos para crear el efecto infinito */}
             {[...Array(2)].map((_, i) => (
               <div key={i} className="flex gap-6">
                 {[
-                  { title: "Diseño de Flyers Publicitarios", desc: "Diseño de piezas promocionales para campañas comerciales y eventos." },
-                  { title: "Motion Graphics", desc: "Animaciones visuales para contenido digital y marketing." },
-                  { title: "Diseño Editorial", desc: "Revistas, catálogos y publicaciones digitales." },
-                  { title: "Edición Audiovisual", desc: "Producción y edición de video para marcas y empresas." }
+                  { title: "Branding", video: "/videos/MG_CarlosMinyety_PrimerParcial.mp4" },
+                  { title: "Flyers Publicitarios", video: "/videos/MG_CarlosMinyety_Práctica6.mp4" },
+                  { title: "Motion Graphics", video: "/videos/BienesVsOtrasInvClip2_Edit2.mp4" },
+                  { title: "Diseño Editorial", video: "/videos/GusReel_2.mp4" },
+                  { title: "Edición de Video", video: "/videos/GymLife_Reel3_Edit.mp4" },
+                  { title: "Contenido para Redes Sociales", video: "/videos/MelconParadisEdit2.mp4" },
                 ].map((project, idx) => (
-                  <div 
-                    key={`${i}-${idx}`} 
-                    className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/5 bg-zinc-900/20 p-8 backdrop-blur-md transition-all duration-500 hover:border-purple-500/30 hover:bg-zinc-900/40 w-[350px] shrink-0"
+                  <div
+                    key={`${i}-${idx}`}
+                    className="group w-[350px] shrink-0 overflow-hidden rounded-2xl border border-white/5 bg-[#1a1a1a] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] hover:border-indigo-500/20"
                   >
-                    <div>
-                      {/* Contenedor Placeholder Visual */}
-                      <div className="mb-6 aspect-video w-full rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/5 opacity-80 flex items-center justify-center text-xs tracking-widest uppercase text-zinc-600 font-bold transition-transform duration-500 group-hover:scale-[1.03]">
-                        Asset En Espera
-                      </div>
-                      <h4 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-purple-400">
-                        {project.title}
-                      </h4>
-                      <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                        {project.desc}
-                      </p>
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-zinc-900/50 flex justify-between items-center text-xs font-bold uppercase tracking-wider text-zinc-500 group-hover:text-white transition-colors">
-                      <span>Próximamente</span>
-                      <span className="transform translate-x-0 transition-transform duration-300 group-hover:translate-x-2">→</span>
+                    <div className="relative h-64 bg-gray-800 overflow-hidden">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover absolute inset-0"
+                      >
+                        <source src={project.video} type="video/mp4" />
+                      </video>
                     </div>
                   </div>
                 ))}
@@ -190,7 +164,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Botón Ver Galería Completa */}
+      <div className="relative z-10 flex justify-center pb-12">
+        <Link
+          href="/proyectos"
+          className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/10 hover:border-white/20"
+        >
+          Ver Galería Completa
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </Link>
+      </div>
       
+      {/* ================= PRECIOS ================= */}
+      <section id="precios" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white mb-16">Tarifas de Servicios</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="group relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-white/5 p-8 transition duration-300 ease-out hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+            <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-4">Videos cortos</h3>
+            <p className="text-3xl font-bold text-white">$50 - $500 USD</p>
+          </div>
+          <div className="group relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-white/5 p-8 transition duration-300 ease-out hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+            <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-4">Motion Graphics</h3>
+            <p className="text-3xl font-bold text-white">$500 - $2,000 USD</p>
+          </div>
+          <div className="group relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-white/5 p-8 transition duration-300 ease-out hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+            <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-4">Videos de YouTube / VSL</h3>
+            <p className="text-3xl font-bold text-white">$300 - $2,000 USD</p>
+          </div>
+          <div className="group relative overflow-hidden rounded-2xl bg-[#1a1a1a] border border-white/5 p-8 transition duration-300 ease-out hover:-translate-y-2 hover:border-white/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+            <h3 className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-4">Otro</h3>
+            <p className="text-3xl font-bold text-white">Desde $3,000 USD</p>
+          </div>
+        </div>
+      </section>
+
       {/* ================= CONTACTO ================= */}
       <section id="contact" className="relative z-10 mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-4">04 // Conexión</h2>
@@ -200,70 +210,48 @@ export default function Home() {
             <p className="mt-2 text-zinc-400 max-w-md">Creemos experiencias visuales memorables que diferencien tu marca. Escríbeme y hablemos de tu próximo proyecto.</p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 w-full md:w-auto justify-center text-left">
-            <div className="space-y-4">
-             {/* Tarjeta de Correo Estilo Premium */}
-<div className="mt-4 w-full">
-  <a 
-    href="mailto:pixelado321@gmail.com" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="group flex w-full max-w-sm items-center justify-between rounded-2xl border border-white/5 bg-[#121212] p-4 transition-all duration-300 hover:bg-[#1a1a1a] hover:border-white/10"
-  >
-    <div className="flex items-center gap-4">
-      {/* Contenedor del ícono azul oscuro */}
-      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0a1930] text-[#3b82f6]">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-        </svg>
-      </div>
-      
-      {/* Textos apilados */}
-      <div className="flex flex-col text-left">
-        <span className="text-base font-bold text-white">Correo Electrónico</span>
-        <span className="text-sm font-medium text-zinc-400">pixelado321@gmail.com</span>
-      </div>
-    </div>
-
-    {/* Flecha indicadora animada */}
-    <div className="text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-zinc-300">
-      →
-    </div>
-  </a>
-</div>
-              <div className="flex items-center gap-3">
-  
-  {/* Tarjeta de WhatsApp Estilo Premium */}
-<div className="mt-4 w-full">
-  <a 
-    href="https://wa.me/18097778500?text=Hola%20Carlos,%20vengo%20de%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto." 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="group flex w-full max-w-sm items-center justify-between rounded-2xl border border-white/5 bg-[#121212] p-4 transition-all duration-300 hover:bg-[#1a1a1a] hover:border-white/10"
-  >
-    <div className="flex items-center gap-4">
-      {/* Contenedor del ícono verde oscuro */}
-      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0b2415] text-[#25D366]">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-        </svg>
-      </div>
-      
-      {/* Textos apilados */}
-      <div className="flex flex-col text-left">
-        <span className="text-base font-bold text-white">WhatsApp</span>
-        <span className="text-sm font-medium text-zinc-400">Respuesta rápida en horario laboral</span>
-      </div>
-    </div>
-
-    {/* Flecha indicadora animada */}
-    <div className="text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-zinc-300">
-      →
-    </div>
-  </a>
-</div>
+          <div className="flex flex-col gap-4 w-full md:w-auto">
+            {/* Tarjeta de WhatsApp */}
+            <a
+              href="https://wa.me/18097778500?text=Hola%20Carlos,%20vengo%20de%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex w-full max-w-sm items-center justify-between rounded-xl border border-white/5 bg-[#121212] p-4 transition-all duration-300 hover:bg-[#1a1a1a] hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0b2415] text-emerald-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-base font-bold text-white">WhatsApp</span>
+                  <span className="text-sm font-medium text-zinc-400">Escríbeme directo</span>
+                </div>
               </div>
-            </div>
+              <div className="text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-zinc-300">→</div>
+            </a>
+
+            {/* Tarjeta de Correo */}
+            <a
+              href="mailto:pixelado321@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex w-full max-w-sm items-center justify-between rounded-xl border border-white/5 bg-[#121212] p-4 transition-all duration-300 hover:bg-[#1a1a1a] hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#0a1930] text-cyan-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-base font-bold text-white">Correo Electrónico</span>
+                  <span className="text-sm font-medium text-zinc-400">pixelado321@gmail.com</span>
+                </div>
+              </div>
+              <div className="text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-zinc-300">→</div>
+            </a>
           </div>
         </div>
       </section>

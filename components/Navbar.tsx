@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -22,7 +23,7 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-        <div className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">
 
           {showAvatar && (
             <Image
@@ -38,13 +39,12 @@ export default function Navbar() {
             Minyety Portfolio Desing 
           </h1>
 
-        </div>
+        </Link>
 
         <div className="flex gap-6 text-sm">
-          <a href="#about">Sobre mí</a>
-          <a href="#skills">Habilidades</a>
-          <a href="#projects">Proyectos</a>
-          <a href="#contact">Contacto</a>
+          <Link href="/#about">Sobre mí</Link>
+          <Link href="/proyectos">Proyectos</Link>
+          <Link href="/#contact">Contacto</Link>
         </div>
 
       </div>
