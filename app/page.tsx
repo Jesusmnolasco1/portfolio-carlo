@@ -139,7 +139,7 @@ export default function Home() {
                   { title: "Motion Graphics", video: "/videos/BienesVsOtrasInvClip2_Edit2.mp4" },
                   { title: "Diseño Editorial", video: "/videos/GusReel_2.mp4" },
                   { title: "Edición de Video", video: "/videos/GymLife_Reel3_Edit.mp4" },
-                  { title: "Contenido para Redes Sociales", video: "/videos/MelconParadisEdit2.mp4" },
+                  { title: "Contenido para Redes Sociales", video: "/videos/Gym_Life_Reel4_Edit.mp4" },
                 ].map((project, idx) => (
                   <div
                     key={`${i}-${idx}`}
@@ -151,6 +151,7 @@ export default function Home() {
                         loop
                         muted
                         playsInline
+                        preload="metadata"
                         className="w-full h-full object-cover absolute inset-0"
                       >
                         <source src={project.video} type="video/mp4" />

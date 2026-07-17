@@ -119,6 +119,7 @@ export default function Proyectos() {
               ref={modalVideoRef}
               className="w-full max-h-[75vh] rounded-2xl shadow-2xl bg-black"
               controls
+              preload="metadata"
               src={selectedVideo}
             />
           </div>
