@@ -87,7 +87,7 @@ export default function Home() {
             {/* Métricas e Info del ITLA */}
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-zinc-900 pt-8">
               <div>
-                <h3 className="text-3xl font-extrabold text-white tracking-tight">2025</h3>
+                <h3 className="text-3xl font-extrabold text-white tracking-tight">2026</h3>
                 <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 mt-1">Graduado ITLA</p>
               </div>
               <div>
