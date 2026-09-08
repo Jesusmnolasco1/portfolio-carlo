@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import ProyectosDestacados from "../components/ProyectosDestacados";
 
 export default function Home() {
   return (
@@ -117,54 +118,7 @@ export default function Home() {
       </section>
 
       {/* ================= PROYECTOS DESTACADOS (Ruleta / Marquee) ================= */}
-      <section id="projects" className="relative z-10 py-20 overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <h2 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">03 // Portafolio</h2>
-            <h3 className="text-4xl font-extrabold text-white tracking-tight">Proyectos Destacados</h3>
-          </div>
-          <p className="text-sm text-zinc-400 max-w-xs">Selección de trabajos conceptuales y comerciales listos para ser transformados en casos de estudio.</p>
-        </div>
-
-        {/* Contenedor de la Ruleta */}
-        <div className="relative w-full overflow-hidden flex">
-          {/* Track de la animación */}
-          <div className="flex w-max animate-ruleta gap-6 px-6">
-            
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex gap-6">
-                {[
-                  { title: "Branding", video: "/videos/MG_CarlosMinyety_PrimerParcial.mp4" },
-                  { title: "Flyers Publicitarios", video: "/videos/MG_CarlosMinyety_Práctica6.mp4" },
-                  { title: "Motion Graphics", video: "/videos/BienesVsOtrasInvClip2_Edit2.mp4" },
-                  { title: "Diseño Editorial", video: "/videos/GusReel_2.mp4" },
-                  { title: "Edición de Video", video: "/videos/GymLife_Reel3_Edit.mp4" },
-                  { title: "Contenido para Redes Sociales", video: "/videos/Gym_Life_Reel4_Edit.mp4" },
-                ].map((project, idx) => (
-                  <div
-                    key={`${i}-${idx}`}
-                    className="group w-[350px] shrink-0 overflow-hidden rounded-2xl border border-white/5 bg-[#1a1a1a] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] hover:border-indigo-500/20"
-                  >
-                    <div className="relative h-64 bg-gray-800 overflow-hidden">
-                      <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="metadata"
-                        className="w-full h-full object-cover absolute inset-0"
-                      >
-                        <source src={project.video} type="video/mp4" />
-                      </video>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
+      <ProyectosDestacados />
 
       {/* Botón Ver Galería Completa */}
       <div className="relative z-10 flex justify-center pb-12">
